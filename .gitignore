@@ -14,6 +14,7 @@ yarn-debug.log
 package-lock.json
 # package.json
 webpack.config.js
+main.js
 
 # Arquivos old
 old/
@@ -25,6 +26,10 @@ old/
 .env.development.local
 .env.test.local
 .env.production.local
+data.json
+
+# Proteção contra letras de unidade Windows
+[A-Z]:*
 
 # Arquivos de cache
 .cache/
