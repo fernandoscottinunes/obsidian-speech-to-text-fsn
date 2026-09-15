@@ -12,9 +12,10 @@ if you want to view the source, please visit the github repository of this plugi
 `;
 
 // --- CONFIGURAÇÃO ---
-// Altere este caminho para o caminho do seu cofre do Obsidian
-// const vaultPath = "D:\\OneDrive\\OBSIDIAN\\FSN Second Brain"; // Caminho do vault no Windows
-const vaultPath = "/mnt/onedrive/OBSIDIAN/FSN Second Brain"; // Caminho do vault no Linux
+const isWindows = process.platform === "win32";
+const vaultPath = isWindows
+    ? "D:\\OneDrive\\OBSIDIAN\\FSN Second Brain"
+    : "/mnt/onedrive/OBSIDIAN/FSN Second Brain";
 const pluginDir = ".obsidian/plugins/obsidian-speech-to-text";
 // --------------------
 
