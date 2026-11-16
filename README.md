@@ -12,13 +12,15 @@ Capture audio from hardware/virtual devices (microphone, mixer, virtual cable), 
 
 ## Install from source
 1) `npm install`  
-2) `npm run build` (generates `main.js` and, if configured in `esbuild.config.mjs`, copies it to your vault's plugin folder).  
-3) Enable the plugin in Obsidian (safe mode off).
+2) Optional: Copy `.env.example` to `.env` and set `OBSIDIAN_VAULT_PATH` to your vault's plugin directory (e.g., `C:/path/to/vault/.obsidian/plugins/speech-to-text-fsn`) to auto-deploy during build.  
+3) `npm run build` (generates `dist/main.js` and copies it to your vault if configured).  
+4) Enable the plugin in Obsidian (safe mode off).
 
 ## Instalar a partir do codigo-fonte (pt-BR)
 1) `npm install`  
-2) `npm run build` (gera `main.js` e, se configurado em `esbuild.config.mjs`, copia para a pasta do plugin no seu vault).  
-3) Ative o plugin no Obsidian (modo seguro desativado).
+2) Opcional: Copie `.env.example` para `.env` e defina `OBSIDIAN_VAULT_PATH` com a pasta do plugin no seu vault (ex.: `C:/caminho/para/vault/.obsidian/plugins/speech-to-text-fsn`) para deploy automatico no build.  
+3) `npm run build` (gera `dist/main.js` e copia para o vault se configurado).  
+4) Ative o plugin no Obsidian (modo seguro desativado).
 
 ## Plugin settings
 - **STT Endpoint (HTTP)**: URL that receives the WAV.
@@ -97,24 +99,24 @@ Este plugin usa apenas dispositivos de entrada de audio para manter compatibilid
 3) No plugin, selecione **CABLE Output**.
 
 ## Checklist to publish to Obsidian community
-- `manifest.json` and `package.json` share the same version and id `obsidian-speech-to-text`.
+- `manifest.json` and `package.json` share the same version and id `speech-to-text-fsn`.
 - `main.js` built from that commit.
 - `README.md` and `LICENSE` (MIT) included in the public repo.
 - Create a tag/release (e.g., `v1.0.0`) on GitHub containing the bundle.
 - In your fork of `obsidianmd/obsidian-releases`, append to `community-plugins.json`:
   ```json
-  { "id": "speech-to-text", "name": "Speech to Text", "author": "Fernando Scotti Nunes", "description": "Capture audio from any source and transcribe into the active note.", "repo": "fernandoscottinunes/obsidian-speech-to-text" }
+  { "id": "speech-to-text-fsn", "name": "Speech to Text - FSN", "author": "Fernando Scotti Nunes", "description": "Capture audio from any source and transcribe into the active note.", "repo": "fernandoscottinunes/obsidian-speech-to-text" }
   ```
 - Open the PR with a link to the release/tag and a brief description of the plugin and STT settings.
 
 ## Checklist para publicar na comunidade Obsidian (pt-BR)
-- `manifest.json` e `package.json` com a mesma versao e id `obsidian-speech-to-text`.
+- `manifest.json` e `package.json` com a mesma versao e id `speech-to-text-fsn`.
 - `main.js` gerado a partir desse commit.
 - `README.md` e `LICENSE` (MIT) no repo publico.
 - Criar tag/release (ex.: `v1.0.0`) no GitHub contendo o bundle.
 - No seu fork de `obsidianmd/obsidian-releases`, adicionar em `community-plugins.json`:
   ```json
-  { "id": "speech-to-text", "name": "Speech to Text", "author": "Fernando Scotti Nunes", "description": "Capture audio from any source and transcribe into the active note.", "repo": "fernandoscottinunes/obsidian-speech-to-text" }
+  { "id": "speech-to-text-fsn", "name": "Speech to Text - FSN", "author": "Fernando Scotti Nunes", "description": "Capture audio from any source and transcribe into the active note.", "repo": "fernandoscottinunes/obsidian-speech-to-text" }
   ```
 - Abrir o PR com link para a release/tag e uma breve descricao do plugin e das configuracoes STT.
 
